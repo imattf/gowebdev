@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Some Sages</title>
+</head>
+<body>
+    <ul>
+        {{range .Wisdom}}
+        <li>{{uc .Name}} - {{.Motto}}</li>
+        {{end}}
+    </ul>
+    <ul>
+        {{range .Wisdom}}
+        <li>{{ft .Name}} - {{.Motto}}</li>
+        {{end}}
+    </ul>
+    <ul>
+        {{range .Transport}}
+        <li>{{.Make}} - {{.Model}} - {{.Doors}}</li>
+        {{end}}
+    </ul>
+</body>
+<html>
