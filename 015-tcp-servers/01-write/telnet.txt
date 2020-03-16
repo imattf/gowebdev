@@ -1,0 +1,12 @@
+For macOS...
+
+Apple no longer include telnet in macOS as of the High Sierra release
+
+First install brewusing following command
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+Now install telnet using following command:
+brew install telnet
+
+Now to debug connectivity to an IP (for localhost) on port (8080), use the following command:
+telnet localhost 8080
