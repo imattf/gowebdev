@@ -3,7 +3,7 @@
 package main
 
 import (
-	"fmt"
+	"io"
 	"log"
 	"net"
 )
@@ -22,5 +22,8 @@ func main() {
 
 	// fmt.Println(string(bstring))
 
-	fmt.Fprintln(conn, "I'm dialing in")
+	//!!!fmt.Fprintln(conn, "I'm dialing in")
+
+	//or
+	io.WriteString(conn, "Hello World")
 }
