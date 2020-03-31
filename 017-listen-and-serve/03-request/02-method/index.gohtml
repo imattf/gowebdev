@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>buh-boom!</title>
+</head>
+<body>
+<h1>buh-boom...</h1>
+
+
+<header>
+
+  {{if .Method}}<p>The request method: {{.Method}}</p>{{end}}
+
+  {{if .Submissions}}<p><strong>vairable names</strong> (identifiers) and <em>values</em>:</p>
+    {{range $key, $value := .Submissions}}
+      <p><strong>{{$key}}</strong>
+      <ul>{{range $value}}<li><em>{{.}}</em></li>{{end}}</ul> 
+    {{end}}
+  {{end}}
+
+</header>
+
+<form action="/" method="POST">
+  <input type="text" name="fname" placeholder="first name" autofocus autocomplete=off>
+  <input type="submit" name="submit-btn" value="butt val">
+</form>
+
+</body>
+</html>
