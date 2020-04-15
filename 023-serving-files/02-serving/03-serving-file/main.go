@@ -5,7 +5,6 @@ package main
 import (
 	"io"
 	"net/http"
-	"os"
 )
 
 func main() {
@@ -27,21 +26,5 @@ func dog(w http.ResponseWriter, req *http.Request) {
 }
 
 func dogPic(w http.ResponseWriter, req *http.Request) {
-	f, err := os.Open("toby.jpg")
-	if err != nil {
-		http.Error(w, "file NOT found", 404)
-		return
-	}
-	defer f.Close()
-
-	//need extra file meta before calling http.ServeContent
-	fi, err := f.Stat()
-	if err != nil {
-		http.Error(w, "file not FOUND", 404)
-		return
-	}
-
-	//serve by writing to response writer w/ http.ServeContent()
-	//more meta-data in play, e.g. mod-time
-	http.ServeContent(w, req, f.Name(), fi.ModTime(), f)
+	http.ServeFile(w, req, "toby.jpg")
 }

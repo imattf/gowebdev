@@ -18,7 +18,7 @@ func dog(w http.ResponseWriter, req *http.Request) {
 
 	// todd says image won't serve, and it does not render
 	// ...because img tag doesn't have the actual file resource
-	//    it has to be served up via http
+	// it has to be served up via http
 	io.WriteString(w, `<img src="/toby.jpg">`)
 
 }
