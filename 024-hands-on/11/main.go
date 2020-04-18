@@ -50,6 +50,8 @@ func contact(w http.ResponseWriter, req *http.Request) {
 func apply(w http.ResponseWriter, req *http.Request) {
 
 	if req.Method == http.MethodPost {
+		// fmt.Println("made it here")
+		// fmt.Fprintln(w, "go look in terminal")
 		err := tmpl.ExecuteTemplate(w, "applyProcess.gohtml", nil)
 		HandleError(w, err)
 		return

@@ -1,0 +1,28 @@
+gcloud app deploy --project fast-gecko-274621
+Services to deploy:
+
+descriptor:      [/Users/matthew/Documents/go/src/github.com/imattf/gowebdev/026-appengine/02/app.yaml]
+source:          [/Users/matthew/Documents/go/src/github.com/imattf/gowebdev/026-appengine/02]
+target project:  [fast-gecko-274621]
+target service:  [default]
+target version:  [20200418t150910]
+target url:      [https://fast-gecko-274621.uc.r.appspot.com]
+
+
+Do you want to continue (Y/n)?  y
+
+Beginning deployment of service [default]...
+Created .gcloudignore file. See `gcloud topic gcloudignore` for details.
+╔════════════════════════════════════════════════════════════╗
+╠═ Uploading 12 files to Google Cloud Storage               ═╣
+╚════════════════════════════════════════════════════════════╝
+File upload done.
+Updating service [default]...done.                                                                                                              
+Setting traffic split for service [default]...done.                                                                                             
+Deployed service [default] to [https://fast-gecko-274621.uc.r.appspot.com]
+
+You can stream logs from the command line by running:
+  $ gcloud app logs tail -s default
+
+To view your application in the web browser run:
+  $ gcloud app browse --project=fast-gecko-274621
