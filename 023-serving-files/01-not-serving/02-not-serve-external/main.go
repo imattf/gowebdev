@@ -1,5 +1,17 @@
-// not serve because...
-// ??serving from external server
+// # ListenAndServe on port 8080 of localhost
+
+// For the default route "/"
+// Have a func called "foo"
+// which writes to the response "foo ran"
+
+// For the route "/dog/"
+// Have a func called "dog"
+// which parses a template called "dog.gohtml"
+// and writes to the response "<h1>This is from dog</h1>"
+// and also shows a picture of a dog when the template is executed.
+
+// Use "http.ServeFile"
+// to serve the file "dog.jpeg"
 
 package main
 
@@ -9,16 +21,12 @@ import (
 )
 
 func main() {
-	http.HandleFunc("/", dog)
+	http.HandleFunc("/", foo)
 	http.ListenAndServe(":8080", nil)
 }
 
-func dog(w http.ResponseWriter, req *http.Request) {
+func foo(w http.ResponseWriter, req *http.Request) {
 	w.Header().Set("Content-Type", "text/html; charset=utf-8")
-
-	// todd says image won't serve, and it does not render
-	// ...because img tag doesn't have the actual file resource
-	// it has to be served up via http
-	io.WriteString(w, `<img src="/toby.jpg">`)
+	io.WriteString(w, "foo ran")
 
 }
