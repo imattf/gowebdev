@@ -1,4 +1,4 @@
-//goofy1
+//goofy1 w/ no Path variable set, index() can't find the set cookie
 
 package main
 
@@ -37,6 +37,7 @@ func set(w http.ResponseWriter, req *http.Request) {
 	c := &http.Cookie{
 		Name:  "my-cookie",
 		Value: "some value",
+		// w/out the Path variable set index() can't find cookie
 	}
 	// set the cookie on the browser; add cookie header to response writer's headers
 	http.SetCookie(w, c)

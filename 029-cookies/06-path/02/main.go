@@ -1,4 +1,4 @@
-//goofy2
+//goofy2 w/ the Path variable set, index() can find the set cookie
 
 package main
 
