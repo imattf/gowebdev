@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<body>
+
+<h1>Index</h1>
+
+<form method="post">
+    <input type="email" name="username" placeholder="email"><br>
+    <input type="text" name="firstname" placeholder="first name"><br>
+    <input type="text" name="lastname" placeholder="last name"><br>
+    <input type="submit">
+</form>
+
+
+{{if .First}}
+    <h1>Here is the user...</h1>
+    <h2>User Name: {{.UserName}}</h2>
+    <h2>First: {{.First}}</h2>
+    <h2>Last: {{.Last}}</h2>
+{{end}}
+
+
+</body>
+</html>
