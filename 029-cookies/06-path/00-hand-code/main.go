@@ -20,6 +20,7 @@ func main() {
 
 	//04
 	http.HandleFunc("/", index)
+	http.Handle("/favicon.ico", http.NotFoundHandler())
 
 	//03
 	http.ListenAndServe(":8080", nil)
