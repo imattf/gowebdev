@@ -1,0 +1,11 @@
+[Unit]
+Description=Go Server
+
+[Service]
+ExecStart=/home/ubuntu/mybinary
+User=root
+Group=root
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

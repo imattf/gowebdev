@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<body>
+
+<h1>Index</h1>
+
+{{if .First}}
+    <h1>Here is the user...</h1>
+    <h2>User Name: {{.UserName}}</h2>
+    <h2>Password: {{.Password}}</h2>
+    <h2>First: {{.First}}</h2>
+    <h2>Last: {{.Last}}</h2>
+    <h2><a href="/logout">log out</a></h2>
+{{else}}
+    <h2><a href="/signup">sign up</a></h2>
+    <h2><a href="/login">login</a></h2>
+{{end}}
+
+<br>
+<h2>Go to <a href="/bar">the bar</a></h2>
+
+
+</body>
+</html>

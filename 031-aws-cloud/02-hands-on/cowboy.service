@@ -1,0 +1,12 @@
+[Unit]
+Description=Go Server
+
+[Service]
+ExecStart=/home/ubuntu/wildwest/cowboy
+WorkingDirectory=/home/ubuntu/wildwest
+User=root
+Group=root
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
