@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>INDEX</title>
+</head>
+<body>
+<script>
+// you have to use javascript to access session access
+    sessionStorage.setItem('favoriteFlavor','vanilla');
+    var taste = sessionStorage.getItem('favoriteFlavor');
+    console.log(taste);
+    sessionStorage.removeItem('favoriteFlavor');
+    taste = sessionStorage.getItem('favoriteFlavor');
+    console.log(taste);
+</script>
+</body>
+
+</html>

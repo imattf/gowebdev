@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>INDEX</title>
+</head>
+<body>
+<script>
+// you have to use javascript to access local access
+    localStorage.setItem('favoriteFlavor','vanilla');
+    var taste = localStorage.getItem('favoriteFlavor');
+    console.log(taste);
+    localStorage.removeItem('favoriteFlavor');
+    taste = localStorage.getItem('favoriteFlavor');
+    console.log(taste);
+</script>
+</body>
+
+</html>
