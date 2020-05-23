@@ -64,11 +64,11 @@ func bar(w http.ResponseWriter, req *http.Request) {
 		return
 	}
 	if u.Role != "007" {
-		http.Error(w, "You must e 007 to enter the bar", http.StatusForbidden)
+		http.Error(w, "You must be 007 to enter the bar", http.StatusForbidden)
 		return
 	}
 	showSessions() //for demo purposes
-	tmpl.ExecuteTemplate(w, "bar.gohtml", nil)
+	tmpl.ExecuteTemplate(w, "bar.gohtml", u)
 }
 
 func signup(w http.ResponseWriter, req *http.Request) {
