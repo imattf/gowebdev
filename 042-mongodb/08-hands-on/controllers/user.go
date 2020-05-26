@@ -49,10 +49,10 @@ func (uc UserController) CreateUser(w http.ResponseWriter, r *http.Request, _ ht
 
 	// create ID
 	id, _ := uuid.NewV4()
-	u.Id = id.String()
+	u.ID = id.String()
 
 	// store the user
-	uc.session[u.Id] = u
+	uc.session[u.ID] = u
 	StoreUsers(uc.session) //update the json file
 
 	uj, err := json.Marshal(u)
