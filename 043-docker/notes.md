@@ -1,6 +1,6 @@
 # Docker Commands
 
-serach images...
+search images...
 ```
 docker search whalesay 
 ```
@@ -29,5 +29,11 @@ remove an image...
 ```
 docker rmi -f image ID or image name
 ```
+
+stop a container...
+```
+docker stop container id
+```
+
 
 see more: https://www.digitalocean.com/community/tutorials/how-to-remove-docker-images-containers-and-volumes
