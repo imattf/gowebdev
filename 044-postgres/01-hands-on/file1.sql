@@ -3,7 +3,9 @@ Comment
 */
 
 -- psql DBNAME USERNAME
--- psql matthew postgres on imattf
+-- psql matthew postgres on iMac
+-- psql postgres postgres in laptop
+-- psql bookstore bond
 
 
 -- todds build…

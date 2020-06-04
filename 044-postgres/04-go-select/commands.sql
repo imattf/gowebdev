@@ -1,3 +1,5 @@
+-- Prep for exercises...
+
 alter user bond with superuser;
 
 
